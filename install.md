@@ -13,7 +13,13 @@
    - ![image](https://github.com/mnh4140/Ansible/assets/71053769/96af3de3-2d62-4348-b544-b6bad4758395)
    2. EPEL 레파지토리에서 설치하면 ansible 사용가능
    3. dnf install epel-release -y
-   4. 다시 ansible 설치 명령어 수행
-   5. dnf install ansible -y
-   6. 설치 확인
+   4. ![image](https://github.com/mnh4140/Ansible/assets/71053769/3ec372b1-a8f1-4937-964b-c50de5d80c45)
+
+   5. 다시 ansible 설치 명령어 수행
+   6. dnf install ansible -y
+   7. ![image](https://github.com/mnh4140/Ansible/assets/71053769/bfbda41d-770d-437f-b11d-91095ae437e4)
+
+   8. 설치 확인
    - ansible --version
+   - ![image](https://github.com/mnh4140/Ansible/assets/71053769/12739193-076e-401f-8d6c-c66ab9bc078d)
+
