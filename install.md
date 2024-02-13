@@ -23,3 +23,8 @@
    - ansible --version
    - ![image](https://github.com/mnh4140/Ansible/assets/71053769/12739193-076e-401f-8d6c-c66ab9bc078d)
 
+4. AWS 환경에서 Ansible 설정
+- AWS EC2 접근 위해 PEM File 사용해야됨
+- ssh-keygen 후 public key 배포해야는데 ssh-copy-id 사용 불가
+- 아래의 명령어 사용 시 가능
+`cat ~/.ssh/id_rsa.pub | ssh -i "KEY_NAME.pem" root@10.0.0.1 "cat - >> ~/.ssh/authorized_keys"`
