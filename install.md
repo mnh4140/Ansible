@@ -1,11 +1,16 @@
 ### 1. 환경구성
    - rocky8 리눅스 2대
+<<<<<<< HEAD
 ### 2. git 설치
+=======
+2. git 설치
+>>>>>>> 1e63a560347825a067670fb9f6a69f1fe4c48970
    - dnf install -y git
    - 마스터 서버에 설치
    - git 클론
    - ![image](https://github.com/mnh4140/Ansible/assets/71053769/f44eb02b-03de-4c73-b5fc-aa952aaec083)
 
+<<<<<<< HEAD
 ### 3. ansible 설치
  1. 설치 전 작업 / 레파지토리 추가
     - dnf install ansible -y
@@ -112,3 +117,27 @@ Get:11 jammy/main amd64 ansible-core all 2.15.9-1ppa~jammy
 Get:12 jammy/universe amd64 python3-winrm all 0.3.0-2
 Get:13 jammy/main amd64 ansible all 8.7.0-1ppa~jammy
 Get:14 jammy-updates/main amd64 python3-paramiko all 2.9.3-0ubuntu1.2
+=======
+3. ansible 설치
+   1. 설치 전 작업 / 레파지토리 추가
+   - dnf install ansible -y
+   - 기본 리파지토리에 ansible 패키지를 제공하지 않아 아래의 오류 발생
+   - ![image](https://github.com/mnh4140/Ansible/assets/71053769/96af3de3-2d62-4348-b544-b6bad4758395)
+   2. EPEL 레파지토리에서 설치하면 ansible 사용가능
+   3. dnf install epel-release -y
+   4. ![image](https://github.com/mnh4140/Ansible/assets/71053769/3ec372b1-a8f1-4937-964b-c50de5d80c45)
+
+   5. 다시 ansible 설치 명령어 수행
+   6. dnf install ansible -y
+   7. ![image](https://github.com/mnh4140/Ansible/assets/71053769/bfbda41d-770d-437f-b11d-91095ae437e4)
+
+   8. 설치 확인
+   - ansible --version
+   - ![image](https://github.com/mnh4140/Ansible/assets/71053769/12739193-076e-401f-8d6c-c66ab9bc078d)
+
+4. AWS 환경에서 Ansible 설정
+- AWS EC2 접근 위해 PEM File 사용해야됨
+- ssh-keygen 후 public key 배포해야는데 ssh-copy-id 사용 불가
+- 아래의 명령어 사용 시 가능
+`cat ~/.ssh/id_rsa.pub | ssh -i "KEY_NAME.pem" root@10.0.0.1 "cat - >> ~/.ssh/authorized_keys"`
+>>>>>>> 1e63a560347825a067670fb9f6a69f1fe4c48970
